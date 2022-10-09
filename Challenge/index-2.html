@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Form Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Challenge/styles-2.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <form action="GET">
+        <h2>How can we help you?</h2>
+        <section>
+          <ul>
+            <li>
+              <label for="username">Your Name</label>
+              <input type="text" name="user-name" id="username" required />
+            </li>
+            <li>
+              <label for="useremail">Your E-mail Address</label>
+              <input type="email" name="user-email" id="useremail" required/>
+            </li>
+            <li>
+              <label for="userphone">Your Phone Number</label>
+              <input type="number" name="user-phone" id="userphone" required/>
+            </li>
+          </ul>
+
+          <div>
+            <label for="message">Your Message</label>
+            <input type="textarea" rows="5" required/>
+          </div>
+
+          <div>
+            <select name="origin" id="origin">
+              <option value="web">Web Search</option>
+              <option value="mouth">Word of Mouth</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </section>
+
+        <section>
+            <h2>How should we reply?</h2>
+            <ul>
+                <li>
+                    <label for="call">Call me</label>
+                    <input type="radio" name="call" id="call" required>
+                </li>
+                <li>
+                    <label for="send-email">Send me an email</label>
+                    <input type="radio" name="send-email" id="send-email" required>
+                </li>
+                <li>
+                    <label for="dont">Don't reply</label>
+                    <input type="radio" name="dont" id="dont" required>
+                </li>
+            </ul>
+            <div>
+                <label for="terms">Accept Terms</label>
+                <input type="checkbox" name="terms" id="terms">
+            </div>
+        </section>
+
+        <section id="buttons">
+            <button type="reset">Clear</button>
+            <button type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>

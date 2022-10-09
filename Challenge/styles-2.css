@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(231, 244, 255);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(31, 31, 31);
+}
+
+form {
+    width: 30rem;
+    margin: 3rem auto;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(236, 235, 235);
+    box-shadow: 1px 1px 1px 1px rgba(189, 186, 186, 0.767);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+label {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+#buttons {
+    display: inline-block;
+}
