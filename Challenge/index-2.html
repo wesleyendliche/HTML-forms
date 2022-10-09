@@ -19,7 +19,7 @@
     <main>
       <form action="GET">
         <h2>How can we help you?</h2>
-        <section>
+        <section id="main-info">
           <ul>
             <li>
               <label for="username">Your Name</label>
@@ -27,20 +27,27 @@
             </li>
             <li>
               <label for="useremail">Your E-mail Address</label>
-              <input type="email" name="user-email" id="useremail" required/>
+              <input type="email" name="user-email" id="useremail" required />
             </li>
             <li>
               <label for="userphone">Your Phone Number</label>
-              <input type="number" name="user-phone" id="userphone" required/>
+              <input type="number" name="user-phone" id="userphone" required />
             </li>
           </ul>
 
           <div>
             <label for="message">Your Message</label>
-            <input type="textarea" rows="5" required/>
+            <input
+              type="textarea"
+              name="message"
+              id="message"
+              rows="7"
+              required
+            />
           </div>
 
           <div>
+            <label for="origin">How did you find us?</label>
             <select name="origin" id="origin">
               <option value="web">Web Search</option>
               <option value="mouth">Word of Mouth</option>
@@ -49,31 +56,37 @@
           </div>
         </section>
 
-        <section>
-            <h2>How should we reply?</h2>
-            <ul>
-                <li>
-                    <label for="call">Call me</label>
-                    <input type="radio" name="call" id="call" required>
-                </li>
-                <li>
-                    <label for="send-email">Send me an email</label>
-                    <input type="radio" name="send-email" id="send-email" required>
-                </li>
-                <li>
-                    <label for="dont">Don't reply</label>
-                    <input type="radio" name="dont" id="dont" required>
-                </li>
-            </ul>
-            <div>
-                <label for="terms">Accept Terms</label>
-                <input type="checkbox" name="terms" id="terms">
-            </div>
+        <section id="select-field">
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="inline-check">
+              <input type="radio" name="call" id="call" value="call" required />
+              <label for="call">Call me</label>
+            </li>
+            <li class="inline-check">
+              <input
+                type="radio"
+                name="send-email"
+                id="send-email"
+                value="email"
+                required
+              />
+              <label for="send-email">Send me an email</label>
+            </li>
+            <li class="inline-check">
+              <input type="radio" name="dont" id="dont" value="no" required />
+              <label for="dont">Don't reply</label>
+            </li>
+          </ul>
+          <div>
+            <input type="checkbox" name="terms" id="terms" />
+            <label for="terms">Accept Terms</label>
+          </div>
         </section>
 
         <section id="buttons">
-            <button type="reset">Clear</button>
-            <button type="submit">Submit</button>
+          <button type="reset">Clear</button>
+          <button type="submit">Submit</button>
         </section>
       </form>
     </main>
