@@ -17,9 +17,9 @@
       <h1>Contact Us</h1>
     </header>
     <main>
-      <form action="GET">
-        <h2>How can we help you?</h2>
+      <form action="/Challenge/" method="GET">
         <section id="main-info">
+          <h2>How can we help you?</h2>
           <ul>
             <li>
               <label for="username">Your Name</label>
@@ -31,62 +31,59 @@
             </li>
             <li>
               <label for="userphone">Your Phone Number</label>
-              <input type="number" name="user-phone" id="userphone" required />
+              <input type="tel" name="user-phone" id="userphone" required minlength="8"/>
             </li>
+            <label for="message">Your Message</label>
+            <textarea name="message" id="message" rows="8" required minlength="10" maxlength="200"></textarea>
           </ul>
 
-          <div>
-            <label for="message">Your Message</label>
-            <input
-              type="textarea"
-              name="message"
-              id="message"
-              rows="7"
-              required
-            />
-          </div>
-
-          <div>
+          <section>
             <label for="origin">How did you find us?</label>
-            <select name="origin" id="origin">
+            <select name="origin" id="origin" required>
               <option value="web">Web Search</option>
-              <option value="mouth">Word of Mouth</option>
+              <option value="word-of-mouth">Word of Mouth</option>
               <option value="other">Other</option>
             </select>
-          </div>
+          </section>
         </section>
 
         <section id="select-field">
           <h2>How should we reply?</h2>
           <ul>
-            <li class="inline-check">
-              <input type="radio" name="call" id="call" value="call" required />
-              <label for="call">Call me</label>
-            </li>
-            <li class="inline-check">
+            <li class="inline-control">
               <input
                 type="radio"
-                name="send-email"
+                name="reply"
+                id="call"
+                value="call"
+                required
+              />
+              <label for="call">Call me</label>
+            </li>
+            <li class="inline-control">
+              <input
+                type="radio"
+                name="reply"
                 id="send-email"
                 value="email"
                 required
               />
               <label for="send-email">Send me an email</label>
             </li>
-            <li class="inline-check">
-              <input type="radio" name="dont" id="dont" value="no" required />
+            <li class="inline-control">
+              <input type="radio" name="reply" id="dont" value="no" required />
               <label for="dont">Don't reply</label>
             </li>
           </ul>
-          <div>
-            <input type="checkbox" name="terms" id="terms" />
-            <label for="terms">Accept Terms</label>
-          </div>
+        </section>
+        <section class="inline-control">
+          <input type="checkbox" name="terms" id="terms" required/>
+          <label for="terms">Accept Terms</label>
         </section>
 
-        <section id="buttons">
-          <button type="reset">Clear</button>
-          <button type="submit">Submit</button>
+        <section id="form-actions">
+          <button type="reset" class="btn-empty">Clear</button>
+          <button type="submit" class="btn-filled">Submit</button>
         </section>
       </form>
     </main>
